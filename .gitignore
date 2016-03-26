@@ -1,1 +1,15 @@
 *.pyc
+
+.tox
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+
+venv/
+ENV/
+
+vcrex.egg-info/
+
+tests/__pycache__/
