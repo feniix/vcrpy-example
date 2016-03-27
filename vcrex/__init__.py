@@ -11,6 +11,9 @@ __version__ = "0.0.1"
 
 logger = logging.getLogger(__name__)
 
+def google_body():
+    return requests.get("https://www.google.com")
+
 def main(args=None):
     if args is None:
         args = sys.argv[1:]
