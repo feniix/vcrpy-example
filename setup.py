@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 # To use a consistent encoding
 from codecs import open
 from os import path
-import vcrex
+from re import search, M
 
 here = path.abspath(path.dirname(__file__))
 
@@ -11,13 +11,26 @@ here = path.abspath(path.dirname(__file__))
 with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
     long_description = f.read()
 
+def read(*parts):
+    # intentionally *not* adding an encoding option to open
+    # see here: https://github.com/pypa/virtualenv/issues/201#issuecomment-3145690
+    return open(path.join(here, *parts), 'r').read()
+
+def find_version(*file_paths):
+    version_file = read(*file_paths)
+    version_match = search(r"^__version__ = ['\"]([^'\"]*)['\"]",
+                              version_file, M)
+    if version_match:
+        return version_match.group(1)
+    raise RuntimeError("Unable to find version string.")
+
 setup(
     name='vcrex',
 
     # Versions should comply with PEP440.  For a discussion on single-sourcing
     # the version across setup.py and the project code, see
     # https://packaging.python.org/en/latest/single_source_version.html
-    version=vcrex.__version__,
+    version=find_version('vcrex', '__init__.py'),
 
     description='Example of use of vcrpy',
     long_description=long_description,
