@@ -8,6 +8,8 @@ Simple example of use of vcr to mock web services
 Setup:
 ------
 
+.. code-block:: bash
+
     #> pip install -r dev-requirements.txt
     Requirement already up-to-date: requests in /usr/local/lib/python2.7/site-packages (from -r dev-requirements.txt (line 1))
     Requirement already up-to-date: vcrpy in /usr/local/lib/python2.7/site-packages (from -r dev-requirements.txt (line 2))
