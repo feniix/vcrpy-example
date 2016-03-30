@@ -4,11 +4,10 @@ A vcrpy example Python project
 
 Simple example of use of vcr to mock web services
 
------
+------
 Setup:
------
+------
 
-.. code-block:: bash
     #> pip install -r dev-requirements.txt
     Requirement already up-to-date: requests in /usr/local/lib/python2.7/site-packages (from -r dev-requirements.txt (line 1))
     Requirement already up-to-date: vcrpy in /usr/local/lib/python2.7/site-packages (from -r dev-requirements.txt (line 2))
@@ -28,7 +27,6 @@ Setup:
 Test:
 -----
 
-.. code-block:: bash
     #> tox
     GLOB sdist-make: /Users/otaeguis/projects/src/spantree/demos/vcr/vcrpy/setup.py
     py27 inst-nodeps: /Users/otaeguis/projects/src/spantree/demos/vcr/vcrpy/.tox/dist/vcrex-0.0.1.zip
