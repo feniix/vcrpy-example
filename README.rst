@@ -27,6 +27,8 @@ Setup:
 Test:
 -----
 
+.. code-block:: bash
+
     #> tox
     GLOB sdist-make: /Users/otaeguis/projects/src/spantree/demos/vcr/vcrpy/setup.py
     py27 inst-nodeps: /Users/otaeguis/projects/src/spantree/demos/vcr/vcrpy/.tox/dist/vcrex-0.0.1.zip
